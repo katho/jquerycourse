@@ -3,6 +3,38 @@
 		<title>Hello, jQuery</title>	
 	</head>
 	<body>
+		
+		<h1>Hello, H1!</h1>
+		<h1 class="demo">Hello, another H1!</h1>
+		<h1 id="h1_demo">Hello, another H1!</h1>
+		
 		<script src="./js/jquery-2.1.4.min.js" ></script>
+		<script>
+			$(function(){
+				/*
+					Adding jQuery to a page and executing the 'Hello world'
+					You can add from a local file previously downloaded or by CDN
+				*/
+				//Will execute when the page is ready - this is for the Hello, world
+				/*
+				This is the same as:
+				$(document).ready(function() {
+					// code here
+				});
+				*/
+				//alert("Hello, world!");
+				
+				/*
+					Basic CSS selectors
+					Using the CSS selectors enable you to manage events for one or multiple UI elements.
+					We will work fisrt with a h1 element.
+				*/ 
+				//Update the text for all the h1 elements
+				$('h1').text('Hello, jQuery!');
+				//Update the for a chosen element by classname
+				$('.demo').text('Hello, pure pokemon magic!');
+				$('#h1_demo').text('Hello, pure web magic!');
+			})
+		</script>
 	</body>
 </html>
