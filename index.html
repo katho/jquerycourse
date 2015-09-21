@@ -4,6 +4,17 @@
 	</head>
 	<body>
 		
+		<header>
+			<h1>Inside header</h1>
+		</header>
+		
+		<header>
+			<div>
+				<h1>Inside header</h1>
+			</div>
+		</header>
+		
+		
 		<h1>Hello, H1!</h1>
 		<h1 class="demo">Hello, another H1!</h1>
 		<h1 id="h1_demo">Hello, another H1!</h1>
@@ -57,10 +68,14 @@
 				
 				/*
 					Positional selectors
-					 
+								 
 				*/
 				
+				//Now descendant to select all the elements that ares descendants from his container 
+				$('header h1').text('Found by descendant');
 				
+				//parent/child
+				$('header > h1').text('Your header found by parent/child!');
 				
 			})
 		</script>
