@@ -7,6 +7,7 @@
 		<h1>Hello, H1!</h1>
 		<h1 class="demo">Hello, another H1!</h1>
 		<h1 id="h1_demo">Hello, another H1!</h1>
+		<h1 custom="my_h1">Hello, another H1!</h1>
 		
 		<script src="./js/jquery-2.1.4.min.js" ></script>
 		<script>
@@ -34,6 +35,33 @@
 				//Update the for a chosen element by classname
 				$('.demo').text('Hello, pure pokemon magic!');
 				$('#h1_demo').text('Hello, pure web magic!');
+				
+				/*
+					Atribute selectors
+					We'll search UI elements using equality, this means
+					the full name of the object
+					
+					There are some others way to find objetcs:
+					you can search, for example, an UI element starting with
+					<h1 class="col-md.5">Hello</h1>
+					$('h1[class^="col"]');
+					
+					Or using Contains
+					<h1 class="col-md.5">Hello</h1>
+					$('h1[class*="col"]');
+					
+					That means you can use regular expressions to find the UI elements
+					
+				*/
+				$('h1[custom="my_h1"]').text('Found by equality atribute');
+				
+				/*
+					Positional selectors
+					 
+				*/
+				
+				
+				
 			})
 		</script>
 	</body>
