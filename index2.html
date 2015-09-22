@@ -1,0 +1,96 @@
+<html>
+	<head>
+		<title>Hello, jQuery</title>	
+	</head>
+	<body>
+		<div style="color:black" class="stop"> First </div>
+		<div style="color:black"> Second </div>
+		<div style="color:black"> third </div>
+		<div id="target" style="color:black"> Fourth (Target) </div>
+		<div style="color:black"> Fifth </div>
+		<div style="color:black"> Sixth </div>
+		<div style="color:black"> Seventh </div>
+		
+		<a href="index3.html">Continue to the next section</a>
+		
+		<script src="./js/jquery-2.1.4.min.js" ></script>
+		<script>
+			$(function(){
+				/*
+					Siblings
+					moving in the DOM
+					prev(optionalSelector)
+					retrieves the previous element on the same level
+					
+					prevAll(optionalSelector)
+					retrieves all previous elements on the same level
+					
+					prevUntil(selector, node or jQuery object)
+					retrieves all previous elements on the same level, up to but not including the element the 
+					selector matches
+					
+					
+					next(optionalSelector)
+					retrieves next element on the same level
+					
+					nextAll(optionalSelector)
+					retrieves all next elements on the same level
+					
+					nextUnitl(selector, node or jQuery object)
+					Retrieves all next elements on the same level, up to but not includig the element the selector
+					matches the selector
+					
+					
+				*/
+				
+				//update previous element
+				//$('#target').prev().attr('style', 'color:red');
+				//$('#target').prevAll().attr('style', 'color:yellow');
+				//update previous until (but not including) first
+				//$('#target').prevUntil('.stop').attr('style', 'color:red');
+				//$('#target').next().attr('style', 'color:blue');
+				$('#target').nextAll().attr('style', 'color:blue');
+				
+				/* 
+					Finding the index of an item
+
+If you have a reference to an object, but need to know where it sits in a collection of items, you can use the index method. The index method will return the zero based (ordinal) location of the item, or -1 if the item isn't found.
+
+
+var currentElement = $('some selector');
+var parent = $('some selector');
+var index = parent.children().index(currentElement);
+Finding an item by its position
+
+If you know the zero based (ordinal) location of an item in a collection, you can obtain a reference to that item by using the get method.
+
+
+var parent = $('some selector');
+var element = parent.children().get(index);
+get return type
+
+One important note about get is it returns a JavaScript DOM object, not a jQuery object. This means the various jQuery methods, such as attr and text are not available. In order to call jQuery methods on the object, you must convert it to a jQuery object. Fortunately, this is just as easy as passing the object into the jQuery constructor. The above code would become:
+
+
+var parent = $('some selector');
+var element = parent.children().get(index);
+var jQueryObject = $(element);
+Or, you could distill it down to two lines
+
+
+var parent = $('some selector');
+var jQueryObject = $(parent.children().get(index));
+Or, I suppose, down to one line.
+
+
+var jQueryObject = $($('some selector').children().get(index));
+It's all just a matter of personal preference.
+				*/
+				
+				
+				//Continue in the index3
+				
+			})
+		</script>
+	</body>
+</html>
