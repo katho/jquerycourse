@@ -1,0 +1,85 @@
+<html>
+	<head>
+		<title>Hello, jQuery</title>
+		<style>
+			.yellow{
+				color: yellow;
+			}
+			.red{
+				color: red;
+			}
+			.div{
+				background-color: blue;
+				margin-top: .1em;
+			}
+			.blue{
+				color: blue;
+				margin-top: .1em;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="target" class="blue">Demo text</div>
+		
+		<a href="index4.html">Continue to the next section</a>
+		
+		<script src="./js/jquery-2.1.4.min.js" ></script>
+		<script>
+			$(function(){
+				/*
+					Modifying elements
+					
+					Managing classes
+					
+				*/
+				//$('#target').addClass('red');
+				//$('#target').removeClass('blue');
+				/*
+					You can even remove multiple class just
+					adding space and other class name.
+					$('#target').removeClass('blue red');
+					if the class does not exist you won't
+					get an error message.
+				*/
+				
+				
+				/* 
+					Modifying atributes
+				*/
+				
+				//Change attribute
+				//$('#target').attr('style', 'color:red');
+				//Get atribute
+				//var colorstyle = $('#target').attr('style');
+				//alert(colorstyle);
+				
+				//Remove attribute 
+				//$('#target').removeAttr('style');
+				
+				
+				/*
+					Modifying text and html
+					
+					methods
+					
+					html()
+					
+					text()
+				 */
+				
+				$(
+					function()
+					{
+						//Replace html
+						//$('#target').html('<u>Updated!</u>');
+						//Replace just text, no markup, litterally text
+						$('#target').text('<u>Updated!</u>');
+					}
+				);
+				
+				//Continue in the index4
+				
+			})
+		</script>
+	</body>
+</html>
